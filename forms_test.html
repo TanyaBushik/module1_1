@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test_Forms</title>
+     <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <form  class="form js-speaker-from">
+        <div class="form-field">
+        <label for="name">Name</label>
+<input type="text" name="user-name" id="name"/>
+</div>
+<div class="form-field">
+<label for="tel">Phone</label>
+<input type="tel" name="tel" id="tel">
+</div>
+<div class="form-field">
+<label for="email">Email</label>
+<input type="email" name="email" id="email">
+</div>
+
+<div role="group" class="group">
+    <h2 class="group-title">What is your power?</h2>
+    <ul class="power-options">
+    <li>
+        <input type="checkbox" name="topic" value="html" id="html">
+<label for="html">HTML</label>
+    </li>
+
+<li>
+    <input type="checkbox" name="topic" value="css" id="css">
+<label for="css">CSS</label>
+</li>
+
+<li><input type="checkbox" name="topic" value="js" id="js">
+<label for="js">JavaScript</label>
+</li>
+</ul>
+</div>
+
+<div role="group" class="group">
+    <h2 class="group-title">What is your level?</h2>
+    <ul class="experience-options">
+        <li>
+            <input type="radio" name="experience" value="junior" id="junior">
+<label for="junior">Junior"</label>
+        </li>
+
+<li>
+    <input type="radio" name="experience" value="middle" id="middle">
+<label for="middle">Middle</label>
+</li>
+
+<li>
+    <input type="radio" name="experience" value="senior" id="senior">
+<label for="senior">Senior</label>
+</li>
+
+</div>
+</ul>
+
+<label for="date">Date</label>
+<input type="datetime-local" name="date" id="date" class="date">
+
+<button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>
+
+<script>
+    (() => {
+        document
+        .querySelector ('.js-speaker-form')
+        .addEventListener ('.submit', e => {
+            e.preventDefault ();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+            console.log('${name}: ${value}'),
+            );
+        });
+    })();
+</script>

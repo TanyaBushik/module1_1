@@ -62,6 +62,7 @@ display: block;
   text-decoration: none;
 }
 
+<<<<<<< HEAD:CSS/styles.css
 .list {
   list-style: none;
 }
@@ -76,3 +77,8 @@ display: block;
   white-space: nowrap;
   overflow: hidden;
 }
+=======
+a .link active {
+  font-weight: 700;
+}
+>>>>>>> 4576159cd0a840d57e73896e9c3975428be6ede7:css/styles.css
